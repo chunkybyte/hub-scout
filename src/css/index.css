@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('../../node_modules/font-awesome/css/font-awesome.min.css');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+  
+/* Header Styles */
+.mainHeader {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #333;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.mainFooter {
+    margin: 0px 40px;
+    padding: 10px 20px;
+    border-top: 1px solid #CCC;
+    color: #333333;
+    text-align: center;
+}
+
+.mainFooter > span:nth-of-type(1) {
+    font-size: 12px;
+}

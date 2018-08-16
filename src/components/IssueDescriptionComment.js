@@ -8,22 +8,9 @@ class IssueDescriptionComment extends React.Component {
     }
 
     componentDidMount() {
-        // const popbtn = this.popoverRef.current;
-        // window.a = popbtn;
-        // console.log(popbtn);
-        // popbtn.popover({
-        //     container: 'body'
-        // });
-
-        // $('[data-toggle="popover"]').popover();
-        
         $('[data-toggle="popover"]').popover({
             html: true
         });
-
-        // $(this.popoverRef).popover({
-        //     container: this.popoverRef
-        // });
     }
 
     render() {

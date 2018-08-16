@@ -24,8 +24,10 @@ class IssueList extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <IssueItem />
-                    <IssueItem />
+                    <div className="issueItemsList">
+                        <IssueItem />
+                        <IssueItem />
+                    </div>
                 </div>
             </div>
         );

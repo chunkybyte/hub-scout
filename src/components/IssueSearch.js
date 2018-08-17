@@ -11,15 +11,15 @@ const IssueSearch = () => {
                                 <strong>Filters</strong>
                             </button>
                             <div className="dropdown-menu">
-                                <a className="dropdown-item" href="#">Open Issues</a>
-                                <a className="dropdown-item" href="#">Your Issues</a>
-                                <a className="dropdown-item" href="#">Everything assigned to you</a>
+                                <a className="dropdown-item" href="">Open Issues</a>
+                                <a className="dropdown-item" href="">Your Issues</a>
+                                <a className="dropdown-item" href="">Everything assigned to you</a>
                             </div>
                         </div>
                         <input type="text" className="form-control" aria-label="Search Issues"  placeholder="is:issue is:open" />
                     </div>
                     <div>
-                        <button className="btn btn-success txtSecondary">
+                        <button className="btn btn-success txtSecondary disabled">
                             New Issue
                         </button>
                     </div>

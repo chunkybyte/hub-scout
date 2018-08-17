@@ -1,2 +1,3 @@
-export const ADD_GITHUB_INFO = "ADD_GITHUB_INFO";
-export const ADD_COMMENT = "ADD_COMMENT";
+export const ADD_GIT_INFO = "ADD_GIT_INFO";
+export const INIT_ISSUES = "INIT_ISSUES";
+export const OPEN_ISSUES_COUNT = "OPEN_ISSUES_COUNT"; 

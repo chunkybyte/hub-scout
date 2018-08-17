@@ -1,15 +1,17 @@
-import { ADD_COMMENT, ADD_GITHUB_INFO } from '../actions/action-types';
+import { ADD_GIT_INFO, INIT_ISSUES, OPEN_ISSUES_COUNT } from '../actions/action-types';
 
 const initialState = {
-    data: {}
+    data: []
 };
 
 const rootReducer = (state = initialState, action) => {
     switch(action.type) {
-        case ADD_COMMENT: 
-            return state;
-        case ADD_GITHUB_INFO:
-            return {...state, gitHubInfo: action.payload}
+        case INIT_ISSUES:
+            return { ...state, data: action.payload};
+        case ADD_GIT_INFO:
+            return { ...state, gituser: action.payload.gituser, gitrepo: action.payload.gitrepo };
+        case OPEN_ISSUES_COUNT:
+            return { ...state, open_issues_count: action.payload}            
         default:
             return state;
     }

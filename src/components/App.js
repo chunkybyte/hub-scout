@@ -11,18 +11,6 @@ class App extends React.Component {
         };
     }
 
-    // componentDidMount () {
-    //     fetch('https://api.github.com/repos/chunkybyte/dummy-repo')
-    //         .then(res => res.json())
-    //         .then(res => {
-    //            console.log('data here');
-    //            console.log(res); 
-    //            this.setState({
-    //                data: res
-    //            });
-    //         });
-    // }
-
     render() {
         return(
             <React.Fragment>

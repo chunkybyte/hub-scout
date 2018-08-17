@@ -11,7 +11,6 @@ class HomePage extends React.Component {
     usernameRef = React.createRef();
     repoRef = React.createRef();
 
-
     handleSubmit = (e) => {
         e.preventDefault();
         console.log(e);
@@ -28,8 +27,7 @@ class HomePage extends React.Component {
                 } else {
                     this.props.history.push(`/${userName}/${repoName}`);         
                 }
-            })
-        // this.props.history.push(`/${userName}/${repoName}`);
+        });
     }
 
     render() {

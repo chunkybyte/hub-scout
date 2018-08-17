@@ -16,9 +16,12 @@ class AddComment extends React.Component {
                 "user.avatar_url": "https://dummyimage.com/50x50/cccccc/000000&text=U",
                 "login": "https://github.com/chunkybyte"
             }, 
-            "created_at": "",
+            "created_at": today,
             "body": body
         };
+
+        localStorage.setItem("data", JSON.stringify(newCommentData));
+        alert('Comment Added to Your localStorage');
     }
 
     render() {

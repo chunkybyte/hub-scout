@@ -61,39 +61,45 @@ class IssueListContainer extends React.Component {
     }
 
     getPagination = () => {
+        const { gituser, gitrepo } = this.props.match.params;
         const data = this.state.pagesInfo;
         let last, prev, next, current, prevButton, nextButton, currentButton;
 
-        if (data['last']) {
-            last = parseInt(data['last']['page']);
+        if (data === null) {
+            prevButton = <li className="page-item"><a disabled className="btn btn-link page-link"> Previous </a></li>;
+            nextButton = <li className="page-item"><a disabled className="btn btn-link page-link"> Next </a></li>;
+            current = 1;
+            last = 1;
         } else {
-            if (data['prev']) {
-                last = parseInt(data['prev']['page']) + 1;
+            if (data['last']) {
+                last = parseInt(data['last']['page']);
             } else {
-                last = 1;
+                if (data['prev']) {
+                    last = parseInt(data['prev']['page']) + 1;
+                } else {
+                    last = 1;
+                }
+            }
+    
+            if (data['prev']) {
+                prev = parseInt(data['prev']['page'])
+                current = prev + 1;
+                prevButton = <li className="page-item"><a className="btn btn-link page-link" href={`/${gituser}/${gitrepo}?page=${prev}`}> Previous </a></li>;
+            } else {
+                prevButton = <li className="page-item"><a disabled className="btn btn-link page-link"> Previous </a></li>;
+            }
+    
+            if (data['next']) {
+                next = parseInt(data['next']['page']);
+                nextButton = <li className="page-item">
+                    <a className="btn btn-link page-link" href={`/github/hub?page=${next}`}> Next </a>
+                </li>
+                current = next - 1;
+            } else {
+                nextButton = <li className="page-item"><a disabled className="btn btn-link page-link"> Next </a></li>;
             }
         }
-
-        if (data['prev']) {
-            prev = parseInt(data['prev']['page'])
-            current = prev + 1;
-            prevButton = <li className="page-item"><a className="btn btn-link page-link" href={`/github/hub?page=${prev}`}> Previous </a></li>;
-        } else {
-            prevButton = <li className="page-item"><a disabled className="btn btn-link page-link"> Previous </a></li>;
-        }
-
-        if (data['next']) {
-            next = parseInt(data['next']['page']);
-            nextButton = <li className="page-item">
-                <a className="btn btn-link page-link" href={`/github/hub?page=${next}`}> Next </a>
-            </li>
-            current = next - 1;
-        } else {
-            nextButton = <li className="page-item"><a disabled className="btn btn-link page-link"> Next </a></li>
-        }
-
         currentButton = <li className="page-item active"><a className="page-link" href="#">{current} of {last}</a></li>;
-
         return [prevButton, nextButton, currentButton];
     }
 

@@ -13,7 +13,6 @@ class HomePage extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e);
         const userName = this.usernameRef.current.value;
         const repoName = this.repoRef.current.value;
         fetch(`https://api.github.com/repos/${userName}/${repoName}`)

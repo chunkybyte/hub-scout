@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import IssueComment from './IssueComment';
+import AddComment from './AddComment';
 
 class IssueDescriptionComment extends React.Component {
     constructor(props) {
@@ -30,6 +31,7 @@ class IssueDescriptionComment extends React.Component {
         return (
             <div>
                 {this.state.comments.map(comment => <IssueComment data={comment} key={comment.id}/>)}
+                <AddComment />
             </div>
         );
     }

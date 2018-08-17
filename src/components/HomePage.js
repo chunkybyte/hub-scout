@@ -21,7 +21,7 @@ class HomePage extends React.Component {
             .then(res => res.json())
             .then(res => {
                 if (res.message === "Not Found") {
-                    console.log(`The github repository "${userName}/${repoName}" doesn't exists.`);
+                    console.log(`The github repository "${userName}/${repoName}" doesn't exist.`);
                     this.setState({
                         exists: false
                     });

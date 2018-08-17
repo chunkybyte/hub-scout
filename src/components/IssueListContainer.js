@@ -32,7 +32,7 @@ class IssueListContainer extends React.Component {
 
                 <main className="container issueListContainer">
                     <IssueSearch />
-                    <IssueList issuesList={this.state.issuesList} />
+                    <IssueList issuesList={this.state.issuesListData} />
                     <div className="row justify-content-center">
                         <div className="col-sm-8">
                             <nav className="issueListPagination">
@@ -55,5 +55,7 @@ class IssueListContainer extends React.Component {
         );
     }
 }
+
+
 
 export default IssueListContainer;

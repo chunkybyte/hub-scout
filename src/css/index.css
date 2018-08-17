@@ -20,6 +20,17 @@ body {
     font-size: 12px;
 }
 
+/* ******************** Homepage Styles ******************** */
+
+.homepageContainer {
+    padding: 30px;
+}
+.gitDetailsForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* ******************** Header Styles ******************** */
 .mainHeader {
     padding: 10px 0px;

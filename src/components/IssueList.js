@@ -25,8 +25,9 @@ class IssueList extends React.Component {
                         </div>
                     </div>
                     <div className="issueItemsList">
-                        <IssueItem />
-                        <IssueItem />
+                        {this.props.issuesList === {} ? 
+                            <div className="text-center">Loading...</div> : 
+                            this.props.issuesList.map(issueData => <IssueItem key={issueData.id} data={issueData} />)}
                     </div>
                 </div>
             </div>

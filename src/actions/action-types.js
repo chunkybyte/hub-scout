@@ -1,0 +1,2 @@
+export const ADD_GITHUB_INFO = "ADD_GITHUB_INFO";
+export const ADD_COMMENT = "ADD_COMMENT";

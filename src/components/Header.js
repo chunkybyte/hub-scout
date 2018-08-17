@@ -1,5 +1,4 @@
 import React from 'react';
-import SubHeader from './SubHeader';
 
 const Header = () => {
     return (
@@ -11,7 +10,6 @@ const Header = () => {
                     </h5>
                 </div>
             </div>
-            <SubHeader />
         </header>
     );
 }
